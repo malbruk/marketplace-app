@@ -11,8 +11,8 @@ const api = axios.create({
 
 // axios.defaults.baseURL = 'https://localhost:7228/api';
 
-const getGrocery1Navigation = cache(async () => {
-  const response = await api.get("/api/grocery-1/navigation");
+const getCategories = cache(async () => {
+  const response = await api.get("/Categories");
   return response.data;
 });
 const getPopularProducts = cache(async () => {
@@ -36,5 +36,5 @@ export default {
   getProducts,
   getPopularProducts,
   getTrendingProducts,
-  getGrocery1Navigation
+  getCategories
 };

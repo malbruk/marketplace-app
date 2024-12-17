@@ -40,11 +40,11 @@ const GroceryOnePageView = (props) => {
   const SideNav = useCallback(
     () => (
       <SideNavbar
-        navList={props.grocery1NavList}
+        navList={props.categories}
         handleSelect={handleSelectCategory}
       />
     ),
-    [props.grocery1NavList]
+    [props.categories]
   );
   return (
     <Fragment>

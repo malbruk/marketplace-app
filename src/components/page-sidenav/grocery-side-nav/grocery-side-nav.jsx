@@ -25,10 +25,10 @@ const GrocerySideNav = ({
         {navigation.map((item, ind) => {
         const Icon = appIcons[item.icon];
         return <Box mb={1} color="grey.700" key={ind}>
-              {item.child ? <NavAccordion Icon={Icon} title={item.title} child={item.child} /> : <NavLink key={item.title} href={item.href} color="grey.700">
+              {item.children ? <NavAccordion Icon={Icon} title={item.name} child={item.children} key={item.name}/> : <NavLink key={item.name} href={item.href} color="grey.700">
                   <FlexBox py={0.75} gap={1.5}>
                     <Icon fontSize="small" />
-                    <Span fontWeight={600}>{item.title}</Span>
+                    <Span fontWeight={600}>{item.name}</Span>
                   </FlexBox>
                 </NavLink>}
             </Box>;

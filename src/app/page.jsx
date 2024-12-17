@@ -16,6 +16,6 @@ export default async function GroceryOne() {
   const serviceList = []; //await api.getServices();
   const popularProducts = []; //await api.getPopularProducts();
   const trendingProducts = []; //await api.getTrendingProducts();
-  const grocery1NavList = []; //await api.getGrocery1Navigation();
-  return <GroceryOnePageView products={products} serviceList={serviceList} popularProducts={popularProducts} grocery1NavList={grocery1NavList} trendingProducts={trendingProducts} />;
+  const categories = await api.getCategories();
+  return <GroceryOnePageView products={products} serviceList={serviceList} popularProducts={popularProducts} categories={categories} trendingProducts={trendingProducts} />;
 }
